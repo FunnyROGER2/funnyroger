@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FunnyROGER</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="FunnyROGER">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<style>
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+			--offset: 20px;
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			padding: 0 var(--offset);
+			font-family: monospace;
+		}
+
+		.header,
+		.footer {
+			height: var(--offset);
+			font-size: 12px;
+			line-height: 150%;
+		}
+
+		.footer {
+			text-align: right;
+		}
+
+		.main {
+			flex-grow: 1;
+			overflow: auto;
+		}
+
+		.main-list {
+			--mobile-k: 1;
+			--items-num: 2;
+			--cells-num: round(up, sqrt(var(--items-num)));
+			display: grid;
+			padding: 0;
+			max-width: 100vh;
+			margin: 0;
+			max-height: 0;
+			grid-template-columns: repeat(calc(var(--cells-num) / var(--mobile-k)), 1fr);
+			grid-template-rows: repeat(calc(var(--cells-num) * var(--mobile-k)), 1fr);
+			font-size: calc(150 / var(--cells-num) / var(--mobile-k) * 1px);
+		}
+
+		@media (width < 1024px) {
+			.main-list {
+				--mobile-k: 2;
+			}
+		}
+
+		@media (width < 768px) {
+			.main-list {
+				--mobile-k: 3;
+			}
+		}
+
+		.main-list__item {
+			list-style: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			aspect-ratio: var(--mobile-k)/1;
+		}
+
+		.main-list__link {
+			transition: opacity 0.5s;
+			display: flex;
+			width: 100%;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			border-radius: 20px;
+			background: #efefef;
+			color: black;
+			text-decoration: none;
+		}
+
+		.main-list__link:hover {
+			opacity: 0.5;
+		}
+
+		.main-list:has(.main-list__item:nth-child(2)) {
+			--items-num: 2;
+		}
+
+		.main-list:has(.main-list__item:nth-child(3)) {
+			--items-num: 3;
+		}
+
+		.main-list:has(.main-list__item:nth-child(4)) {
+			--items-num: 4;
+		}
+
+		.main-list:has(.main-list__item:nth-child(5)) {
+			--items-num: 5;
+		}
+
+		.main-list:has(.main-list__item:nth-child(6)) {
+			--items-num: 6;
+		}
+
+		.main-list:has(.main-list__item:nth-child(7)) {
+			--items-num: 7;
+		}
+
+		.main-list:has(.main-list__item:nth-child(8)) {
+			--items-num: 8;
+		}
+
+		.main-list:has(.main-list__item:nth-child(9)) {
+			--items-num: 9;
+		}
+
+		.main-list:has(.main-list__item:nth-child(10)) {
+			--items-num: 10;
+		}
+
+		.main-list:has(.main-list__item:nth-child(11)) {
+			--items-num: 11;
+		}
+
+		.main-list:has(.main-list__item:nth-child(12)) {
+			--items-num: 12;
+		}
+
+		.main-list:has(.main-list__item:nth-child(13)) {
+			--items-num: 13;
+		}
+
+		.main-list:has(.main-list__item:nth-child(14)) {
+			--items-num: 14;
+		}
+
+		.main-list:has(.main-list__item:nth-child(15)) {
+			--items-num: 15;
+		}
+
+		.main-list:has(.main-list__item:nth-child(16)) {
+			--items-num: 16;
+		}
+
+		.main-list:has(.main-list__item:nth-child(17)) {
+			--items-num: 17;
+		}
+
+		.main-list:has(.main-list__item:nth-child(18)) {
+			--items-num: 18;
+		}
+
+		.main-list:has(.main-list__item:nth-child(19)) {
+			--items-num: 19;
+		}
+
+		.main-list:has(.main-list__item:nth-child(20)) {
+			--items-num: 20;
+		}
+
+		.main-list:has(.main-list__item:nth-child(21)) {
+			--items-num: 21;
+		}
+
+		.main-list:has(.main-list__item:nth-child(22)) {
+			--items-num: 22;
+		}
+
+		.main-list:has(.main-list__item:nth-child(23)) {
+			--items-num: 23;
+		}
+
+		.main-list:has(.main-list__item:nth-child(24)) {
+			--items-num: 24;
+		}
+
+		.main-list:has(.main-list__item:nth-child(25)) {
+			--items-num: 25;
+		}
+
+		.main-list:has(.main-list__item:nth-child(26)) {
+			--items-num: 26;
+		}
+
+		.main-list:has(.main-list__item:nth-child(27)) {
+			--items-num: 27;
+		}
+
+		.main-list:has(.main-list__item:nth-child(28)) {
+			--items-num: 28;
+		}
+
+		.main-list:has(.main-list__item:nth-child(29)) {
+			--items-num: 29;
+		}
+
+		.main-list:has(.main-list__item:nth-child(30)) {
+			--items-num: 30;
+		}
+
+		.main-list:has(.main-list__item:nth-child(31)) {
+			--items-num: 31;
+		}
+
+		.main-list:has(.main-list__item:nth-child(32)) {
+			--items-num: 32;
+		}
+
+		.main-list:has(.main-list__item:nth-child(33)) {
+			--items-num: 33;
+		}
+
+		.main-list:has(.main-list__item:nth-child(34)) {
+			--items-num: 34;
+		}
+
+		.main-list:has(.main-list__item:nth-child(35)) {
+			--items-num: 35;
+		}
+
+		.main-list:has(.main-list__item:nth-child(36)) {
+			--items-num: 36;
+		}
+
+		.main-list:has(.main-list__item:nth-child(37)) {
+			--items-num: 37;
+		}
+
+		.main-list:has(.main-list__item:nth-child(38)) {
+			--items-num: 38;
+		}
+
+		.main-list:has(.main-list__item:nth-child(39)) {
+			--items-num: 39;
+		}
+
+		.main-list:has(.main-list__item:nth-child(40)) {
+			--items-num: 40;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<a href="/about">FunnyROGER</a>
+	</header>
+	<main class="main">
+		<ul class="main-list">
+			<li class="main-list__item">
+				<a class="main-list__link" href="https://cd.funnyroger.ru">CountDOWN</a>
+			</li>
+			<li class="main-list__item">
+				<a class="main-list__link" href="/about">About</a>
+			</li>
+		</ul>
+	</main>
+	<footer class="footer">
+		<a href="/about">FunnyROGER</a>
+	</footer>
+</body>
+
+</html>
